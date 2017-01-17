@@ -1,0 +1,47 @@
+// ==========================================================================
+// Buttons
+// ==========================================================================
+
+.btn {
+  @include bg-colors($ui-colors);
+  align-self: center;
+  margin-top: auto;
+  @include m(info){
+    max-width: 200px;
+    align-self: flex-end;
+  }
+}
+.btn--info{
+  max-width: 200px;
+  align-self: flex-end;
+  @include mq(small){
+    margin-bottom: 0px !important;
+  }
+}
+[class^="btn--"] {
+  @extend %center-align;
+  @extend %btn;
+  font-weight: $font-weight--bold;
+  margin-bottom: em(20px, 14px);
+  @include mq(small) {
+    width: 100%;
+  }
+  @include mq(medium) { 
+    width: auto;
+    display: inline-block;
+    @include doubly(20px);
+  }
+}
+
+.btn__product{
+  @extend %center-align;
+  @extend %btn;
+  font-size: 13px;
+  text-transform: uppercase;
+  vertical-align: top;
+  border: 1px solid rgba(0,0,0,0.2);
+  color: $grey;
+  opacity: 1;
+  height: 30px;
+  white-space: nowrap;
+}

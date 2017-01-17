@@ -1,0 +1,7 @@
+.main-content{
+  margin-top: em($menu-height);
+  display: flex;
+  height: 100vh;
+  flex-wrap: wrap;
+  border: 10px solid red;
+}

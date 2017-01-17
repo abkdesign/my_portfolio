@@ -1,0 +1,105 @@
+// ==========================================================================
+// Panels
+// ==========================================================================
+
+.panel {
+  @extend %panel-default;
+  
+  @include m(centered) {
+    @extend %panel-default;
+    @extend %center-align;    
+  }
+  
+  @include m(padded) {
+    @extend %panel-padding;
+    
+    @include m(centered) {
+      @extend %center-align;
+	    @extend %panel-padding;
+    }
+  }
+  @include m(padded-all) {
+    @extend %panel-padding-all;
+
+    @include m(centered) {
+      @extend %center-align;
+      @extend %panel-padding;
+    }
+  }
+}
+
+
+
+.zero{
+  @include span-columns(6);
+  background: $white;
+  overflow: hidden;
+  position: relative;
+  height: 400px;
+  h2{
+    font-size: rem(30px);
+  }
+
+  img{
+    max-width: 100%;
+
+    top: 0;
+    left: 0;
+    margin: 0px;
+    padding: 0px;
+
+  }
+  @include mq(medium){
+    @include span-columns(7);
+    height: 350px;
+    img{
+      max-width: 100%;
+      max-height: 350px;
+    }
+  }
+  @include mq(small){
+    @include span-columns(10);
+    height: 230px;
+    img{
+      max-width: 100%;
+      max-height: 350px;
+    }
+  }
+}
+.fifth{
+  h2{
+    color:#4c4c4c;
+    font-size: rem(30px);
+  }
+  height: 400px;
+  @include span-columns(4);
+  background: bisque;
+  @include mq(small){
+    @include span-columns(10);
+    height: 230px;
+  }
+  @include mq(medium){
+    @include span-columns(3);
+    height: 350px;
+    img{
+      max-width: 100%;
+      max-height: 350px;
+    }
+  }
+  .component__content{
+
+  }
+}
+.component-container{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+}
+.outer-container{
+  @include outer-container;
+  width: 100%;
+  background: grey;
+  overflow:hidden;
+
+}

@@ -1,0 +1,35 @@
+// ==========================================================================
+// Images
+// ==========================================================================
+
+.img {
+  position: relative;
+  @include m(wrap) {
+    border: 1px solid palette(grey, x-light);
+    padding: em(12px);
+  }
+  @include m(avatar) {
+    display: block;
+    border-radius: $br--round;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: em(24px);
+  }
+  @include m(hero) {
+    @media (min-width: 769px) {
+      margin-bottom: em(42px);
+    }
+  }
+}
+.overlay{
+  :before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.6;
+    z-index: 1;
+  }
+}

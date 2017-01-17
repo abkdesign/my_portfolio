@@ -1,0 +1,22 @@
+.header-container{
+  width: 100%;
+  height: 100%;
+  max-width: $g-cont-max-w;
+  float: none;
+  @extend %flexbox;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  @include mq(small){
+    flex-direction: row;
+  }
+}
+.site-header{
+  position: fixed;
+  width: 100%;
+  top:0;
+  left:0;
+}

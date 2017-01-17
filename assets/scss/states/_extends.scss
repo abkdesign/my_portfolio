@@ -1,0 +1,42 @@
+//flexbox
+%flexbox{
+  display: flex;
+
+}
+%flexbox-mobile{
+  display: flex;
+  @include mq(small){
+    flex-direction: column;
+  }
+}
+%flex-fit {
+  flex: 1;
+  position: relative;
+  @include mq(small){
+    flex: 50%
+  }
+}
+
+%flex-1of2 {
+  flex: 50%;
+  position: relative;
+
+}
+%flex-1of3 {
+  flex: 0 0 33.3333%;
+  position: relative;
+  @include mq(small){
+    flex:0 0 100%
+  }
+}
+%flex-1of4 {
+  flex: 25%;
+  position: relative;
+  @include mq(small){
+    flex:0 0 100%
+  }
+}
+%flex-full {
+  flex: 100%;
+  position: relative;
+}

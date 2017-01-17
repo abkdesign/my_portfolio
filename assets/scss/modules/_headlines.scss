@@ -1,0 +1,110 @@
+// ==========================================================================
+// Headlines
+// ==========================================================================
+.page-title{
+	font-size: rem(58px);
+	letter-spacing: rem(2px);
+	margin-top: 0px;
+	font-weight: 500;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	line-height: 110%;
+}
+.entry-title{
+	margin-bottom: 10px;
+	@include mq(small){
+		font-size: 3.5rem;
+	}
+}
+.widget-title{
+	margin-top: 0px;
+}
+.headline {
+
+	&-primary {
+		@extend %hdln-prim;
+		margin-bottom: em(70px, 42px);
+
+		@include m(grouped) {
+			@extend %hdln-prim;
+			margin-bottom: 0;
+		}
+	}
+
+ 	&-secondary {
+		@extend %hdln-sec;
+		margin-bottom: em(22px, 24px);
+
+		@include m(grouped) {
+			@extend %hdln-sec;
+			margin-top: em(10px, 24px);
+	 		margin-bottom: em(54px, 24px);
+		}		
+	}
+	&-hero{
+
+		h1{
+			letter-spacing: $letter-space;
+			font-weight: $font-weight--thin;
+			font-size: em(48px);
+			font-family: $font-family--secondary;
+			color: $white;
+			text-transform:uppercase;
+		;
+		}
+		h2{
+			letter-spacing: $letter-space;
+			font-weight: $font-weight--medium;
+			font-size: em(24px);
+			font-family: $font-family--secondary;
+			color: $white;
+		}
+		margin-bottom: 0;
+	}
+	&-widget{
+
+		font-weight: $font-weight--bold;
+		margin-bottom: em(10px);
+		line-height: rem(38px);
+		margin-top: 0;
+		color:$grey;
+		@include m(grouped){
+			font-size: rem(36px);
+			line-height: rem(36px);
+			margin-top: 0px;
+			margin-bottom: em(0px);
+			font-weight: $font-weight--bold;
+			@include mq(small){
+				margin-bottom: em(5px);
+			}
+		}
+		@include m(sub){
+			font-weight: $font-weight--light;
+			font-size: rem(28px);
+			line-height: $base__line;
+			margin-bottom: em(10px);
+		}
+		@include mq(small){
+			margin-bottom: 0px;
+		}
+	}
+	&-break{
+		line-height: em(20px);
+		text-transform: uppercase;
+		text-align: center;
+		border-top: 1px solid palette(grey, x-light);
+	;
+		margin-top: em(48px);
+		margin-bottom: em(5px);
+		font-size: rem(34px);
+		span{
+			position: relative;
+			padding: 0 10px;
+			top: -26px;
+			background: #ffffff;
+			letter-spacing: -0.01em;
+			line-height: 3.4rem;
+		}
+	}
+
+}

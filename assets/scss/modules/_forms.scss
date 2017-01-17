@@ -1,0 +1,42 @@
+// ==========================================================================
+// Form Elements
+// ==========================================================================
+
+.wpcf7-form {
+	label {
+		@include m(hidden) {
+			@extend .srt;
+		}
+		display: block;
+		margin-bottom: em(10px);
+	}
+
+	input,textarea {
+		font-size : em(18px);
+		margin-bottom: em(20px, 18px);
+		border-bottom: 6px solid palette(grey, x-light);
+		border-radius: $br--default;
+		background: palette(grey, xx-light);
+		color: palette(black, dark);
+		font-weight: $font-weight--light;
+
+		&:focus {	
+			border-color: $color-primary;
+		}
+	}
+
+	input[type="submit"] {
+		@extend %center-align;
+		@extend %btn;
+		font-size: 13px;
+		text-transform: uppercase;
+		vertical-align: top;
+		border: 1px solid rgba(0,0,0,0.2);
+		padding: 5px 10px 5px 10px;
+		color: $grey;
+		opacity: 1;
+		height: 30px;
+		white-space: nowrap;
+		background: #fff;
+	}
+}
