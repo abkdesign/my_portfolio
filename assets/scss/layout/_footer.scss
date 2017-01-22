@@ -1,11 +1,14 @@
-.main-footer {
+.site-footer {
   background:#fff;
-  padding: 2em 0;
-  margin-top: 80px;
-  text-align: center;
 
+  text-align: center;
+  margin-bottom: em($mobile-menu-height);
 }
 .footer-content{
   display: flex;
   align-content: space-between;
+  flex-wrap: wrap;
+  @include e(container){
+    margin-bottom: em($mobile-menu-height/2);
+  }
 }

@@ -1,7 +1,10 @@
 .main-content{
   margin-top: em($menu-height);
   display: flex;
-  height: 100vh;
+  min-height: em(480px);
   flex-wrap: wrap;
   border: 10px solid red;
+  @include mq(small){
+    margin-top: em($menu-height/2);
+  }
 }

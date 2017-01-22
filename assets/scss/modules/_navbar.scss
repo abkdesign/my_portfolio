@@ -37,14 +37,14 @@
   background: $color-primary;
 	h1{
 		font-size: 20px;
-		margin: 0px;
+		margin: 0;
 	}
 	.site-description{
 		visibility: hidden;
 		display: none;
-		margin: 0px;
+		margin: 0;
 	}
   @include mq(small){
-	  height: em($menu-height);
+	  height: 100%;
   }
 }

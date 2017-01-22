@@ -12,6 +12,7 @@
   margin-right: auto;
   @include mq(small){
     flex-direction: row;
+    height: em($menu-height/2);
   }
 }
 .site-header{

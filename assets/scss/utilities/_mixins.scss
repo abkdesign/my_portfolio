@@ -113,4 +113,18 @@
       width: percentage($target / $context);
     }
   }
-}          
+}
+@mixin ellipsis ($max-width){
+  display: inline-block;
+  max-width: $max-width;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+@mixin circle($size){
+  display: block;
+  text-align: center;
+  width: $size;
+  height: $size;
+  border-radius: $size / 2 + 0px;
+}

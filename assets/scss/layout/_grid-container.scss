@@ -22,4 +22,7 @@
   @include container(80em);
   flex-grow: 1;
   background: rosybrown;
+  height: 100%;
+  padding-left: em(15px);
+  padding-right: em(15px);
 }
