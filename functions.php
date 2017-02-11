@@ -65,7 +65,9 @@ function react_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
-
+    // disable double line-breaks in the text into HTML paragraphs
+	remove_filter( 'the_content', 'wpautop' );
+    remove_filter( 'the_excerpt', 'wpautop' );
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
 }
@@ -106,6 +108,12 @@ add_action( 'widgets_init', 'react_widgets_init' );
 My custom setup for wordpress
 ##############################################################################
 */
+function adjust_image_sizes_attr( $sizes, $size ) {
+    $sizes = '(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 62vw, 840px';
+    return $sizes;
+}
+add_filter( 'wp_calculate_image_sizes', 'adjust_image_sizes_attr', 10 , 2 );
+
 function clean_custom_menus() {
 	$menu_name = 'nav-primary'; // specify custom menu slug
 	if (($locations = get_nav_menu_locations()) && isset($locations[$menu_name])) {
@@ -133,7 +141,7 @@ function clean_custom_menus() {
 function react_scripts() {
 	wp_enqueue_style( 'react-style', get_stylesheet_uri() );
     wp_enqueue_style( 'custome-style', get_template_directory_uri() . '/assets/css/style.min.css' );
-	wp_enqueue_script( 'react-navigation', get_template_directory_uri() . '/assets/js/build/app.js', array(), null, true );
+	wp_enqueue_script( 'react-navigation', get_template_directory_uri() . '/assets/js/build/reactapp.js', array(), null, true );
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
